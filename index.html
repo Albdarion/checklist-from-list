@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checklist manager</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <input type="file" id="saves-loader" class="d-none">
+
+    <div id="root" class="p-3">
+        <div id="paste-explain" class="pop-up">
+            <div class="trigger">?</div>
+
+            <div class="pop-up-window down from-left">
+                Paste your list here, where every item is placed in new line like this:
+                <br>
+                <br>
+                <span class="c-red">
+                    Clean the kitchen
+                    <br>
+                    Cook dinner
+                    <br>
+                    Tide up the bedroom
+                    <br>
+                    Wash the dishes
+                </span>
+                <br>
+                <br>
+                Then hit <span class="c-orange">Append</span> to convert entered list into checklist
+            </div>
+        </div>
+
+        <div id="manage-explain" class="pop-up">
+            <div class="trigger">?</div>
+
+            <div class="pop-up-window down from-right">
+                Click on item so to mark it as <span class="c-green">done</span>.
+                <br>
+                Click again to revert this action.
+                <br>
+                Use <span class="c-orange">Save</span> to export checklist.
+                <br>
+                Use <span class="c-orange">Load</span> to recover exported checklist.
+                <br>
+                Click near checkbox to select item.
+                <br>
+                Use <span class="c-orange">Select all</span> to select all items.
+                <br>
+                Use <span class="c-orange">Remove</span> to remove selected items.
+            </div>
+        </div>
+
+        <div id="source-side" class="side">
+            <div id="source-block" class="block">
+                <textarea id="source">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nam id est id velit pulvinar efficitur.
+Vestibulum accumsan lacus sed neque volutpat, id venenatis metus sagittis.
+Quisque in purus sodales, semper dolor consectetur, laoreet dui.
+Integer ac velit in sem vehicula efficitur ut at turpis.
+Donec id felis condimentum, convallis ante eu, porttitor ligula.
+Duis molestie dui lacinia mauris porttitor, vel consectetur est maximus.
+Donec eleifend orci vel tincidunt porttitor.
+Vestibulum eu dolor in nisl maximus lobortis id vel mauris.
+Nulla malesuada lacus at diam molestie, volutpat pharetra tortor iaculis.
+Integer feugiat ipsum et bibendum laoreet.
+Sed sit amet metus eget purus blandit congue in in tellus.
+Suspendisse cursus turpis pharetra convallis gravida.
+Quisque nec elit malesuada, molestie purus ut, elementum lorem.
+Donec eu felis vitae nulla egestas euismod.
+Vestibulum pulvinar velit quis mi venenatis suscipit.
+Curabitur vitae sapien ac sem tempor vestibulum.
+Nam at odio ut lorem dapibus ullamcorper at ac metus.
+Nulla finibus nulla ac purus maximus varius.
+Fusce sagittis eros commodo aliquam placerat.
+Morbi suscipit dui ac est feugiat iaculis.
+Mauris feugiat eros ac porta mollis.
+Quisque id metus rutrum, cursus mi ultricies, auctor quam.
+Cras efficitur libero ut nisl rutrum, eu malesuada nisl lobortis.
+Mauris sit amet dui eu turpis cursus aliquet.
+Donec dictum tellus quis est pulvinar, posuere hendrerit eros commodo.
+Nullam quis diam fringilla, lobortis erat sit amet, elementum massa.
+Pellentesque vitae ante sit amet nunc bibendum pellentesque et sed urna.
+Vivamus consectetur metus a turpis egestas sollicitudin.
+Phasellus condimentum mauris non vestibulum commodo.
+Nullam sit amet lacus sit amet eros ultrices feugiat.
+Mauris ullamcorper diam quis turpis fermentum egestas.
+Aenean vehicula orci ut urna interdum, ac rutrum lectus pretium.
+Nulla lobortis tortor eu mi maximus, ut lobortis dui placerat.</textarea>
+            </div>
+
+            <div id="convert-block" class="block slim-block">
+                <button type="button" id="clear" class="btn">Clear</button>
+
+                <button type="button" id="convert" class="btn">Append</button>
+            </div>
+        </div>
+
+        <div id="result-side" class="side">
+            <div id="manage-block" class="block slim-block">
+                <button type="button" id="save" class="btn">Save</button>
+
+                <button type="button" id="load" class="btn">Load</button>
+
+                <button type="button" id="select-all" class="btn">Select all</button>
+
+                <button type="button" id="remove" class="btn">Remove</button>
+            </div>
+
+            <div id="result-block" class="block">
+                <div id="checklist"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
