@@ -73,7 +73,7 @@ textarea {
 :root {
     --width: 700px;
     --slim-block-height: 70px;
-    --border-spacing: 3rem;
+    --border-spacing: 2rem;
 
     --orange: rgb(255, 165, 0);
     --inv-orange: rgb(0, 90, 255);

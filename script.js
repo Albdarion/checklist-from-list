@@ -9,7 +9,7 @@ function Download(pFilename, pText) {
     // create anchor element
     let element = document.createElement('a');
     // set its destination so browser treats is as download prompt with given text
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(pText));
+    element.setAttribute('href', 'data:text/json;charset=utf-8,' + encodeURIComponent(pText));
     // set default name for downloaded file
     element.setAttribute('download', pFilename);
 
@@ -251,5 +251,11 @@ window.addEventListener('load', function () {
                 selectAll = true;
             }
         }
+    });
+
+    this.document.getElementById('to-list').addEventListener('click', function (event) {
+        let strings = entries.map((el) => el.value);
+        let joined = strings.join('\n');
+        document.getElementById('source').value = joined;
     });
 });
